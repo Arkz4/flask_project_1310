@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Reservation list</title>
+		<link rel="stylesheet" href="/static/style.css">
+	</head>
+	<body>
+		<h2> Reservation List</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Check-in date</th>
+					<th>Check-out date</th>
+					<th>Room Type</th>
+				</tr>
+			</thead>
+			
+			</tbody>
+			{% for r in reservations %}
+			<tr>
+				<td>{{ r.name }}</td>
+				<td>{{ r.checkin }}</td>
+				<td>{{ r.checkout }}</td>
+				<td>{{ r.room_type }}</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<a href="/"><button>Back to Home</button></a>
+	</body>
+
+		
